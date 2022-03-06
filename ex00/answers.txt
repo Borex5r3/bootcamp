@@ -1,0 +1,5 @@
+conda list | awk 'NR == 4, NR == wc -l' | cut -c 1-40
+conda list numpy
+conda remove numpy
+conda install numpy
+conda list python | awk 'NR == 4, NR == wc -l' | cut -c 1-40 > requirements.txt
